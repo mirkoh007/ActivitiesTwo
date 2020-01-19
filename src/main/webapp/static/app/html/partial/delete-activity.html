@@ -1,0 +1,40 @@
+<div ng-controller="deleteController">
+	<div class="container">
+	
+		<div class="jumbotron">
+			<h1 class="text-center font-effect-fire-animation">DELETE AN ACTIVITY</h1>
+			<hr class="my-4">
+			<p class="lead text-center font-effect-3d" id="delAct1">Choose carefully, choose wisely!</p>
+		
+		</div>
+		
+		<table class="table table-striped">
+			  
+			    <tr ng-repeat="activity in activities">
+			      <td>{{activity.name}}</td>
+			      <td> <button type="button" class="btn btn-danger" ng-click="deleteActivity(activity.id)"><i class="fas fa-trash-alt"></i></button></td>
+			      
+			    </tr>
+			    
+			  
+		</table>
+		
+		<div class="btn-group pull-right" >
+			<button type="button" class="btn btn-success" ng-click="back()" ng-disabled="page == 0">PREVIOUS</button>
+			<button type="button" class="btn btn-light" ng-click="firstPage()" ng-disabled="page == 0">1</button>
+			<!-- <button type='button' class='btn btn-default' ng-disabled='true'># of Pages: {{num_pages}}</button> -->	
+			<!-- <button type='button' class='btn btn-default' ng-disabled='true'>{{page+1}}</button> -->
+			<button type="button" class="btn btn-light" ng-click="lastPage()" ng-disabled="page == num_pages-1">{{num_pages}}</button>
+			<button type="button" class="btn btn-info" ng-click="forward()" ng-disabled="page == num_pages-1">NEXT</button>
+	  </div>
+		
+		<br/>
+		<a type="button" href="#!/" role="button" class="btn btn-success my-5 pull-right"><i class="fas fa-arrow-left"></i>  Back to safety!</a>
+	
+	
+	
+	</div>  <!-- container -->
+
+
+
+</div> <!-- ng controller -->
